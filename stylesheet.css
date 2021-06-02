@@ -1,0 +1,21 @@
+body {
+    background-image: url(./assets/hintergrund_web.png);
+    background-repeat: no-repeat;
+    background-size: contain; 
+    width: auto; 
+    height: auto;
+    background-attachment: fixed;  
+    /* background-color: rgb(0, 0, 0); */
+    }
+
+    .wrapper{
+        display: grid;
+        grid-template-columns: 20% 20%;
+        grid-template-rows: 20% 20%;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        justify-items: stretch;
+        align-items: stretch;
+        
+        }
+   

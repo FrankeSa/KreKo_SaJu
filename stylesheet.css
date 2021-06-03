@@ -5,7 +5,6 @@ body {
     width: auto; 
     height: auto;
     background-attachment: fixed;  
-    /* background-color: rgb(0, 0, 0); */
     }
 
     .wrapper{
@@ -16,6 +15,16 @@ body {
         grid-row-gap: 20px;
         justify-items: stretch;
         align-items: stretch;
+        justify-content: center;
         
         }
-   
+
+        /* .wrapper div{
+            border: 2;
+            border-style: solid;
+            height:max-content;   
+            background-color: azure;      
+          
+        } */
+
+  

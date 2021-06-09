@@ -1,25 +1,24 @@
 {
-  "name": "eia2_abschlussarbeit",
+  "name": "kreko_saju",
   "version": "1.0.0",
-  "description": "dieAbschlussarbeit",
-  "main": "index.js",
+  "description": "SoundMotion",
+  "main": "Server.js",
   "dependencies": {
-    "@types/mongodb": "^3.6.3",
-    "@types/node": "^14.14.22",
-    "mongodb": "^3.6.3"
+    "ws": "^7.4.6"
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node Server/Server.js remote"
+    "test": "first test",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FrankeSa/EIA2_Abschlussarbeit.git"
+    "url": "git+https://github.com/FrankeSa/KreKo_SaJu.git"
   },
-  "author": "Sarah Franke",
+  "author": "JuliaAndSarah",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/FrankeSa/EIA2_Abschlussarbeit/issues"
+    "url": "https://github.com/FrankeSa/KreKo_SaJu/issues"
   },
-  "homepage": "https://github.com/FrankeSa/EIA2_Abschlussarbeit#readme"
+  "homepage": "https://github.com/FrankeSa/KreKo_SaJu#readme"
 }

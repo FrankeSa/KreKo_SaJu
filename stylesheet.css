@@ -1,30 +1,1473 @@
 body {
-    background-image: url(./assets/background_web.png);
-    background-repeat: no-repeat;
-    background-size: contain; 
-    width: auto; 
-    height: auto;
-    background-attachment: fixed;  
+        background-image: url("./assets/footerkurz.png");
+        background-repeat: no-repeat;
+        background-size: contain; 
+        width: auto; 
+        height: auto;
+        background-attachment: fixed;  
+        background-position: bottom;
     }
 
-    .wrapper{
-        display: grid;
-        grid-template-columns: 20% 20%;
-        grid-template-rows: 20% 20%;
-        grid-column-gap: 20px;
-        grid-row-gap: 20px;
-        justify-items: stretch;
-        align-items: stretch;
+    /*LOGO*/
+    #brand {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    }
+
+    /*LOG-IN-DIV*/
+    #loginDiv{
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    margin-left: auto;
+	margin-right: auto;
+    margin-top: 2%;
+    }
+
+    /*INPUT-FIELD*/
+    #inputField {
+        width: 270px;
+        text-align: center;
+        font-size: 20px;
+        font-family: 'Montserrat', sans-serif;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        opacity: 0.7;
+        border-radius: 10px;
+    }
+
+    #inputField:hover {
+        opacity: 1;
+    }
+
+    /*LOG-IN-BUTTON*/
+    #loginBtn {
+        width: 230px;
+        font-size: 15px;
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 20px;
+        background-color: white;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        opacity: 0.7;
+        border-radius: 10px;
+    }
+
+    #loginBtn:hover {
+        opacity: 1;
+        width: 250px;
+        font-size: 20px;
+
+    }
+
+    /*MOTION CATEGORIES DIV*/
+    #motionCategoriesDiv {
+        width: 420px;
+        height: 420px;
+        text-align: center;
         justify-content: center;
-        
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /*ÜBERSCHRIFTEN*/
+    #headingMotionCategories {
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 2%;
+    }
+
+    /*MOTION CATEGORIES PAGE: SAD BUTTON*/
+    .sad {
+        width: 200px;
+        height: 200px;
+        border: none;
+        outline: none;
+        color: #fff;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        background-color: rgba(134, 142, 248, 0.83);
+        border-radius: 10px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        float: left;
+        margin-bottom: 20px;
+        opacity: 0.6;
+    }
+    
+    .sad:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+    
+    .sad:active {
+        color: rgba(134, 142, 248, 0.83);
         }
+    
+    .sad:active:after {
+        background: transparent;
+    }
+    
+    .sad:hover:before {
+        opacity: 1;
+    }
+    
+    .sad:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(134, 142, 248, 0.83);
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
 
-        /* .wrapper div{
-            border: 2;
-            border-style: solid;
-            height:max-content;   
-            background-color: azure;      
-          
-        } */
+    .sad:hover {
+        opacity: 1;
+        color: black;
+    }
+    
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
 
+    /*MOTION CATEGORIES PAGE: HAPPY BUTTON*/
+    .happy {
+        width: 200px;
+        height: 200px;
+        border: none;
+        outline: none;
+        color: #fff;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        background-color: rgba(247, 244, 134, 0.83);
+        border-radius: 10px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        float: right;
+        margin-bottom: 20px;
+        opacity: 0.6;
+    }
+    
+    .happy:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+    
+    .happy:active {
+        color: rgba(247, 244, 134, 0.83);
+        }
+    
+    .happy:active:after {
+        background: transparent;
+    }
+    
+    .happy:hover:before {
+        opacity: 1;
+    }
+    
+    .happy:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(247, 244, 134, 0.83);
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+
+    .happy:hover {
+        color: black;
+        opacity: 1;
+    }
+    
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+
+
+
+    /*MOTION CATEGORIES PAGE: ANGRY BUTTON*/
+    .angry {
+        width: 200px;
+        height: 200px;
+        border: none;
+        outline: none;
+        color: #fff;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        background-color: rgba(245, 115, 115, 0.83);
+        border-radius: 10px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        float: left;
+        opacity: 0.6;
+    }
+    
+    .angry:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+    
+    .angry:active {
+        color: rgba(245, 115, 115, 0.83);
+        }
+    
+    .angry:active:after {
+        background: transparent;
+    }
+    
+    .angry:hover:before {
+        opacity: 1;
+    }
+    
+    .angry:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(245, 115, 115, 0.83);
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+
+    .angry:hover {
+        color: black;
+        opacity: 1;
+    }
+    
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+
+    /*MOTION CATEGORIES PAGE: LOVE BUTTON*/
+    .love {
+        width: 200px;
+        height: 200px;
+        border: none;
+        outline: none;
+        color: #fff;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        background-color: rgba(225, 111, 246, 0.83);
+        border-radius: 10px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        float: right;
+        opacity: 0.6;
+    }
+    
+    .love:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+    
+    .love:active {
+        color: rgba(225, 111, 246, 0.83);
+        }
+    
+    .love:active:after {
+        background: transparent;
+    }
+    
+    .love:hover:before {
+        opacity: 1;
+    }
+    
+    .love:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(225, 111, 246, 0.83);
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+
+    .love:hover {
+        color: black;
+        opacity: 1;
+    }
+    
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+
+    /*SAD-PAGE SAD-PAGE SAD-PAGE SAD-PAGE SAD-PAGE SAD-PAGE SAD-PAGE SAD-PAGE SAD-PAGE*/
+    .wrapperSad {
+        margin-top: 7%;
+        width: 640px;
+        height: 220px;
+        text-align: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+    }
+
+    /*SAD1*/
+    #sad1 {
+        width: 200px;
+        height: 200px;
+        border: none;
+        outline: none;
+        color: #fff;
+        position: relative;
+        z-index: 0;
+        background-color: rgba(134, 142, 248, 0.83);
+        border-radius: 10px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        opacity: 0.6;
+        float: left;
+        margin-right: 20px;
+    }
+    
+    #sad1:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+    
+    #sad1:active {
+        color: rgba(134, 142, 248, 0.83);
+        }
+    
+    #sad1:active:after {
+        background: transparent;
+    }
+    
+    #sad1:hover:before {
+        opacity: 1;
+    }
+    
+    #sad1:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(134, 142, 248, 0.83);
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+
+    #sad1:hover {
+        color: black;
+        opacity: 1;
+    }
+    
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+
+
+    /*SAD2*/
+    #sad2 {
+        width: 200px;
+        height: 200px;
+        border: none;
+        outline: none;
+        color: #fff;
+        position: relative;
+        z-index: 0;
+        background-color: rgba(134, 142, 248, 0.83);
+        border-radius: 10px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        opacity: 0.6;
+        float: left;
+        margin-right: 20px;
+    }
+    
+    #sad2:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+    
+    #sad2:active {
+        color: rgba(134, 142, 248, 0.83);
+        }
+    
+    #sad2:active:after {
+        background: transparent;
+    }
+    
+    #sad2:hover:before {
+        opacity: 1;
+    }
+    
+    #sad2:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(134, 142, 248, 0.83);
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+
+    #sad2:hover {
+        color: black;
+        opacity: 1;
+    }
+    
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+
+   /*SAD3*/
+    #sad3 {
+        width: 200px;
+        height: 200px;
+        border: none;
+        outline: none;
+        color: #fff;
+        position: relative;
+        z-index: 0;
+        background-color: rgba(134, 142, 248, 0.83);
+        border-radius: 10px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        opacity: 0.6;
+        float: left;
+    }
+    
+    #sad3:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+    
+    #sad3:active {
+        color: rgba(134, 142, 248, 0.83);
+        }
+    
+    #sad3:active:after {
+        background: transparent;
+    }
+    
+    #sad3:hover:before {
+        opacity: 1;
+    }
+    
+    #sad3:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(134, 142, 248, 0.83);
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+
+    #sad3:hover {
+        color: black;
+        opacity: 1;
+    }
+    
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+
+    /*SEND BUTTON*/
+    .sadSend {
+        background-color: rgba(134, 142, 248, 0.83);
+        color: white;
+        text-align: center;
+        width: 50px;
+        bottom: 10px;
+        position: absolute;
+        right: 10px;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .sadSend:hover {
+        color: black;
+    }
+
+    /*PLAY BUTTON*/
+    .sadPlay {
+        background-color: rgba(134, 142, 248, 0.83);
+        color: white;
+        text-align: center;
+        width: 50px;
+        bottom: 10px;
+        position: absolute;
+        left: 10px;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .sadPlay:hover {
+        color: black;
+    }
+
+    /*BREAK BUTTON*/
+    .sadBreak {
+        background-color: rgba(134, 142, 248, 0.83);
+        color: white;
+        text-align: center;
+        width: 50px;
+        bottom: 10px;
+        position: absolute;
+        left: 75px;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .sadBreak:hover {
+        color: black;
+    }
+
+    /* HAPPY PAGE HAPPY PAGE HAPPY PAGE HAPPY PAGE HAPPY PAGE HAPPY PAGE*/
+    .wrapperHappy {
+        margin-top: 7%;
+        width: 640px;
+        height: 220px;
+        text-align: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+    }
+
+    /*HAPPY*/
+    #happy1 {
+        width: 200px;
+        height: 200px;
+        border: none;
+        outline: none;
+        color: #fff;
+        position: relative;
+        z-index: 0;
+        background-color: rgba(247, 244, 134, 0.83);
+        border-radius: 10px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        opacity: 0.6;
+        float: left;
+        margin-right: 20px;
+    }
+    
+    #happy1:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+    
+    #happy1:active {
+        color: rgba(247, 244, 134, 0.83);
+        }
+    
+    #happy1:active:after {
+        background: transparent;
+    }
+    
+    #happy1:hover:before {
+        opacity: 1;
+    }
+    
+    #happy1:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(247, 244, 134, 0.83);
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+
+    #happy1:hover {
+        color: black;
+        opacity: 1;
+    }
+    
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+
+
+    /*HAPPY2*/
+    #happy2 {
+        width: 200px;
+        height: 200px;
+        border: none;
+        outline: none;
+        color: #fff;
+        position: relative;
+        z-index: 0;
+        background-color: rgba(247, 244, 134, 0.83);
+        border-radius: 10px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        opacity: 0.6;
+        float: left;
+        margin-right: 20px;
+    }
+    
+    #happy2:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+    
+    #happy2:active {
+        color: rgba(247, 244, 134, 0.83);
+        }
+    
+    #happy2:active:after {
+        background: transparent;
+    }
+    
+    #happy2:hover:before {
+        opacity: 1;
+    }
+    
+    #happy2:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(247, 244, 134, 0.83);
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+
+    #happy2:hover {
+        color: black;
+        opacity: 1;
+    }
+    
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+
+   /*HAPPY3*/
+    #happy3 {
+        width: 200px;
+        height: 200px;
+        border: none;
+        outline: none;
+        color: #fff;
+        position: relative;
+        z-index: 0;
+        background-color: rgba(247, 244, 134, 0.83);
+        border-radius: 10px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        opacity: 0.6;
+        float: left;
+    }
+    
+    #happy3:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+    
+    #happy3:active {
+        color: rgba(247, 244, 134, 0.83);
+        }
+    
+    #happy3:active:after {
+        background: transparent;
+    }
+    
+    #happy3:hover:before {
+        opacity: 1;
+    }
+    
+    #happy3:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(247, 244, 134, 0.83);
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+
+    #happy3:hover {
+        color: black;
+        opacity: 1;
+    }
+    
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+
+    /*SEND BUTTON*/
+    .happySend {
+        background-color: rgba(247, 244, 134, 0.83);
+        color: white;
+        text-align: center;
+        width: 50px;
+        bottom: 10px;
+        position: absolute;
+        right: 10px;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .happySend:hover {
+        color: black;
+    }
+
+    /*PLAY BUTTON*/
+    .happyPlay {
+        background-color: rgba(247, 244, 134, 0.83);
+        color: white;
+        text-align: center;
+        width: 50px;
+        bottom: 10px;
+        position: absolute;
+        left: 10px;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .happyPlay:hover {
+        color: black;
+    }
+
+    /*BREAK BUTTON*/
+    .happyBreak {
+        background-color: rgba(247, 244, 134, 0.83);
+        color: white;
+        text-align: center;
+        width: 50px;
+        bottom: 10px;
+        position: absolute;
+        left: 75px;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .happyBreak:hover {
+        color: black;
+    }
+
+    /*ANGRY PAGE ANGRY PAGE ANGRY PAGE ANGRY PAGE ANGRY PAGE ANGRY PAGE ANGRY PAGE*/
+
+    .wrapperAngry {
+        margin-top: 7%;
+        width: 640px;
+        height: 220px;
+        text-align: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+    }
+
+    /*ANGRY1*/
+    #angry1 {
+        width: 200px;
+        height: 200px;
+        border: none;
+        outline: none;
+        color: #fff;
+        position: relative;
+        z-index: 0;
+        background-color: rgba(245, 115, 115, 0.83);
+        border-radius: 10px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        opacity: 0.6;
+        float: left;
+        margin-right: 20px;
+    }
+    
+    #angry1:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+    
+    #angry1:active {
+        color: rgba(245, 115, 115, 0.83);
+        }
+    
+    #angry1:active:after {
+        background: transparent;
+    }
+    
+    #angry1:hover:before {
+        opacity: 1;
+    }
+    
+    #angry1:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(245, 115, 115, 0.83);
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+
+    #angry1:hover {
+        color: black;
+        opacity: 1;
+    }
+    
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+
+    /*ANGRY2*/
+    #angry2 {
+        width: 200px;
+        height: 200px;
+        border: none;
+        outline: none;
+        color: #fff;
+        position: relative;
+        z-index: 0;
+        background-color: rgba(245, 115, 115, 0.83);
+        border-radius: 10px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        opacity: 0.6;
+        float: left;
+        margin-right: 20px;
+    }
+    
+    #angry2:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+    
+    #angry2:active {
+        color: rgba(245, 115, 115, 0.83);
+        }
+    
+    #angry2:active:after {
+        background: transparent;
+    }
+    
+    #angry2:hover:before {
+        opacity: 1;
+    }
+    
+    #angry2:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(245, 115, 115, 0.83);
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+
+    #angry2:hover {
+        color: black;
+        opacity: 1;
+    }
+    
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+
+   /*ANGRY3*/
+    #angry3 {
+        width: 200px;
+        height: 200px;
+        border: none;
+        outline: none;
+        color: #fff;
+        position: relative;
+        z-index: 0;
+        background-color: rgba(245, 115, 115, 0.83);
+        border-radius: 10px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        opacity: 0.6;
+        float: left;
+    }
+    
+    #angry3:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+    
+    #angry3:active {
+        color: rgba(245, 115, 115, 0.83);
+        }
+    
+    #angry3:active:after {
+        background: transparent;
+    }
+    
+    #angry3:hover:before {
+        opacity: 1;
+    }
+    
+    #angry3:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(245, 115, 115, 0.83);
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+
+    #angry3:hover {
+        color: black;
+        opacity: 1;
+    }
+    
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+
+    /*SEND BUTTON*/
+    .angrySend {
+        background-color: rgba(245, 115, 115, 0.83);
+        color: white;
+        text-align: center;
+        width: 50px;
+        bottom: 10px;
+        position: absolute;
+        right: 10px;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .angrySend:hover {
+        color: black;
+    }
+
+    /*PLAY BUTTON*/
+    .angryPlay {
+        background-color: rgba(245, 115, 115, 0.83);
+        color: white;
+        text-align: center;
+        width: 50px;
+        bottom: 10px;
+        position: absolute;
+        left: 10px;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .angryPlay:hover {
+        color: black;
+    }
+
+    /*BREAK BUTTON*/
+    .angryBreak {
+        background-color: rgba(245, 115, 115, 0.83);
+        color: white;
+        text-align: center;
+        width: 50px;
+        bottom: 10px;
+        position: absolute;
+        left: 75px;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .angryBreak:hover {
+        color: black;
+    }
+
+    /* LOVE PAGE LOVE PAGE LOVE PAGE LOVE PAGE LOVE PAGE LOVE PAGE LOVE PAGE */
+    .wrapperLove {
+        margin-top: 7%;
+        width: 640px;
+        height: 220px;
+        text-align: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+    }
+
+    /*LOVE1*/
+    #love1 {
+        width: 200px;
+        height: 200px;
+        border: none;
+        outline: none;
+        color: #fff;
+        position: relative;
+        z-index: 0;
+        background-color: rgba(225, 111, 246, 0.83);
+        border-radius: 10px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        opacity: 0.6;
+        float: left;
+        margin-right: 20px;
+    }
+    
+    #love1:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+    
+    #love1:active {
+        color: rgba(225, 111, 246, 0.83);
+        }
+    
+    #love1:active:after {
+        background: transparent;
+    }
+    
+    #love1:hover:before {
+        opacity: 1;
+    }
+    
+    #love1:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(225, 111, 246, 0.83);
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+
+    #love1:hover {
+        color: black;
+        opacity: 1;
+    }
+    
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+
+    /*LOVE2*/
+    #love2 {
+        width: 200px;
+        height: 200px;
+        border: none;
+        outline: none;
+        color: #fff;
+        position: relative;
+        z-index: 0;
+        background-color: rgba(225, 111, 246, 0.83);
+        border-radius: 10px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        opacity: 0.6;
+        float: left;
+        margin-right: 20px;
+    }
+    
+    #love2:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+    
+    #love2:active {
+        color: rgba(225, 111, 246, 0.83);
+        }
+    
+    #love2:active:after {
+        background: transparent;
+    }
+    
+    #love2:hover:before {
+        opacity: 1;
+    }
+    
+    #love2:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(225, 111, 246, 0.83);
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+
+    #love2:hover {
+        color: black;
+        opacity: 1;
+    }
+    
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+
+   /*LOVE3*/
+    #love3 {
+        width: 200px;
+        height: 200px;
+        border: none;
+        outline: none;
+        color: #fff;
+        position: relative;
+        z-index: 0;
+        background-color: rgba(225, 111, 246, 0.83);
+        border-radius: 10px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        opacity: 0.6;
+        float: left;
+    }
+    
+    #love3:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+    
+    #love3:active {
+        color: rgba(225, 111, 246, 0.83);
+        }
+    
+    #love3:active:after {
+        background: transparent;
+    }
+    
+    #love3:hover:before {
+        opacity: 1;
+    }
+    
+    #love3:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(225, 111, 246, 0.83);
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+
+    #love3:hover {
+        color: black;
+        opacity: 1;
+    }
+    
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+
+    /*SEND BUTTON*/
+    .loveSend {
+        background-color: rgba(225, 111, 246, 0.83);
+        color: white;
+        text-align: center;
+        width: 50px;
+        bottom: 10px;
+        position: absolute;
+        right: 10px;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .loveSend:hover {
+        color: black;
+    }
+
+    /*PLAY BUTTON*/
+    .lovePlay {
+        background-color: rgba(225, 111, 246, 0.83);
+        color: white;
+        text-align: center;
+        width: 50px;
+        bottom: 10px;
+        position: absolute;
+        left: 10px;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .lovePlay:hover {
+        color: black;
+    }
+
+    /*BREAK BUTTON*/
+    .loveBreak {
+        background-color: rgba(225, 111, 246, 0.83);
+        color: white;
+        text-align: center;
+        width: 50px;
+        bottom: 10px;
+        position: absolute;
+        left: 75px;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .loveBreak:hover {
+        color: black;
+    }
   

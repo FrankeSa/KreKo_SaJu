@@ -161,7 +161,7 @@ body {
         cursor: pointer;
         position: relative;
         z-index: 0;
-        background-color: rgba(241, 108, 0, 0.83);
+        background-color: rgba(241, 205, 0, 0.83);
         border-radius: 10px;
         font-family: 'Montserrat', sans-serif;
         font-size: 40px;
@@ -188,7 +188,7 @@ body {
     }
     
     .happy:active {
-        color: rgba(247, 244, 134, 0.83);
+        color: rgba(241, 205, 0, 0.83);
         }
     
     .happy:active:after {
@@ -205,7 +205,7 @@ body {
         position: absolute;
         width: 100%;
         height: 100%;
-        background: rgba(247, 244, 134, 0.83);
+        background: rgba(241, 205, 0, 0.83);
         left: 0;
         top: 0;
         border-radius: 10px;
@@ -605,41 +605,7 @@ body {
         color: black;
     }
 
-    /*PLAY BUTTON*/
-    .sadPlay {
-        background-color: rgba(134, 142, 248, 0.83);
-        color: white;
-        text-align: center;
-        width: 50px;
-        bottom: 10px;
-        position: absolute;
-        left: 10px;
-        cursor: pointer;
-        border: none;
-        border-radius: 10px;
-    }
-
-    .sadPlay:hover {
-        color: black;
-    }
-
-    /*BREAK BUTTON*/
-    .sadBreak {
-        background-color: rgba(134, 142, 248, 0.83);
-        color: white;
-        text-align: center;
-        width: 50px;
-        bottom: 10px;
-        position: absolute;
-        left: 75px;
-        cursor: pointer;
-        border: none;
-        border-radius: 10px;
-    }
-
-    .sadBreak:hover {
-        color: black;
-    }
+    
 
     /* HAPPY PAGE HAPPY PAGE HAPPY PAGE HAPPY PAGE HAPPY PAGE HAPPY PAGE*/
     .wrapperHappy {
@@ -663,7 +629,7 @@ body {
         color: #fff;
         position: relative;
         z-index: 0;
-        background-color: rgba(247, 244, 134, 0.83);
+        background-color: rgba(241, 205, 0, 0.83);
         border-radius: 10px;
         font-family: 'Montserrat', sans-serif;
         font-size: 40px;
@@ -690,7 +656,7 @@ body {
     }
     
     #happy1:active {
-        color: rgba(247, 244, 134, 0.83);
+        color: rgba(241, 205, 0, 0.83);
         }
     
     #happy1:active:after {
@@ -707,7 +673,7 @@ body {
         position: absolute;
         width: 100%;
         height: 100%;
-        background: rgba(247, 244, 134, 0.83);
+        background: rgba(241, 205, 0, 0.83);
         left: 0;
         top: 0;
         border-radius: 10px;
@@ -734,7 +700,7 @@ body {
         color: #fff;
         position: relative;
         z-index: 0;
-        background-color: rgba(247, 244, 134, 0.83);
+        background-color: rgba(241, 205, 0, 0.83);
         border-radius: 10px;
         font-family: 'Montserrat', sans-serif;
         font-size: 40px;
@@ -761,7 +727,7 @@ body {
     }
     
     #happy2:active {
-        color: rgba(247, 244, 134, 0.83);
+        color: rgba(241, 205, 0, 0.83);
         }
     
     #happy2:active:after {
@@ -778,7 +744,7 @@ body {
         position: absolute;
         width: 100%;
         height: 100%;
-        background: rgba(247, 244, 134, 0.83);
+        background: rgba(241, 205, 0, 0.83);
         left: 0;
         top: 0;
         border-radius: 10px;
@@ -804,7 +770,7 @@ body {
         color: #fff;
         position: relative;
         z-index: 0;
-        background-color: rgba(247, 244, 134, 0.83);
+        background-color: rgba(241, 205, 0, 0.83);
         border-radius: 10px;
         font-family: 'Montserrat', sans-serif;
         font-size: 40px;
@@ -830,7 +796,7 @@ body {
     }
     
     #happy3:active {
-        color: rgba(247, 244, 134, 0.83);
+        color: rgba(241, 205, 0, 0.83);
         }
     
     #happy3:active:after {
@@ -847,7 +813,7 @@ body {
         position: absolute;
         width: 100%;
         height: 100%;
-        background: rgba(247, 244, 134, 0.83);
+        background: rgba(241, 205, 0, 0.83);
         left: 0;
         top: 0;
         border-radius: 10px;
@@ -866,7 +832,7 @@ body {
 
     /*SEND BUTTON*/
     .happySend {
-        background-color: rgba(247, 244, 134, 0.83);
+        background-color: rgba(241, 205, 0, 0.83);
         color: white;
         text-align: center;
         width: 50px;
@@ -882,41 +848,6 @@ body {
         color: black;
     }
 
-    /*PLAY BUTTON*/
-    .happyPlay {
-        background-color: rgba(247, 244, 134, 0.83);
-        color: white;
-        text-align: center;
-        width: 50px;
-        bottom: 10px;
-        position: absolute;
-        left: 10px;
-        cursor: pointer;
-        border: none;
-        border-radius: 10px;
-    }
-
-    .happyPlay:hover {
-        color: black;
-    }
-
-    /*BREAK BUTTON*/
-    .happyBreak {
-        background-color: rgba(247, 244, 134, 0.83);
-        color: white;
-        text-align: center;
-        width: 50px;
-        bottom: 10px;
-        position: absolute;
-        left: 75px;
-        cursor: pointer;
-        border: none;
-        border-radius: 10px;
-    }
-
-    .happyBreak:hover {
-        color: black;
-    }
 
     /*ANGRY PAGE ANGRY PAGE ANGRY PAGE ANGRY PAGE ANGRY PAGE ANGRY PAGE ANGRY PAGE*/
 
@@ -1159,41 +1090,6 @@ body {
         color: black;
     }
 
-    /*PLAY BUTTON*/
-    .angryPlay {
-        background-color: rgba(245, 115, 115, 0.83);
-        color: white;
-        text-align: center;
-        width: 50px;
-        bottom: 10px;
-        position: absolute;
-        left: 10px;
-        cursor: pointer;
-        border: none;
-        border-radius: 10px;
-    }
-
-    .angryPlay:hover {
-        color: black;
-    }
-
-    /*BREAK BUTTON*/
-    .angryBreak {
-        background-color: rgba(245, 115, 115, 0.83);
-        color: white;
-        text-align: center;
-        width: 50px;
-        bottom: 10px;
-        position: absolute;
-        left: 75px;
-        cursor: pointer;
-        border: none;
-        border-radius: 10px;
-    }
-
-    .angryBreak:hover {
-        color: black;
-    }
 
     /* LOVE PAGE LOVE PAGE LOVE PAGE LOVE PAGE LOVE PAGE LOVE PAGE LOVE PAGE */
     .wrapperLove {
@@ -1435,39 +1331,4 @@ body {
         color: black;
     }
 
-    /*PLAY BUTTON*/
-    .lovePlay {
-        background-color: rgba(225, 111, 246, 0.83);
-        color: white;
-        text-align: center;
-        width: 50px;
-        bottom: 10px;
-        position: absolute;
-        left: 10px;
-        cursor: pointer;
-        border: none;
-        border-radius: 10px;
-    }
-
-    .lovePlay:hover {
-        color: black;
-    }
-
-    /*BREAK BUTTON*/
-    .loveBreak {
-        background-color: rgba(225, 111, 246, 0.83);
-        color: white;
-        text-align: center;
-        width: 50px;
-        bottom: 10px;
-        position: absolute;
-        left: 75px;
-        cursor: pointer;
-        border: none;
-        border-radius: 10px;
-    }
-
-    .loveBreak:hover {
-        color: black;
-    }
   

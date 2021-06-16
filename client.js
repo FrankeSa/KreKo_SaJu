@@ -15,4 +15,4 @@ var soundMotion;
         alert("dein Nutzername ist:" + username);
     }
 })(soundMotion || (soundMotion = {})); //Ende Namespance
-//# sourceMappingURL=chat.js.map
+//# sourceMappingURL=client.js.map

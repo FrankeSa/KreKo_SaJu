@@ -2,17 +2,17 @@
 var soundMotion;
 (function (soundMotion) {
     window.addEventListener("load", handleLoad);
+    let audio = new Audio();
     let happy1;
     let happy2;
     let happy3;
-    let audio = new Audio();
     function handleLoad(_event) {
         happy1 = document.querySelector("#happy1");
         happy1.addEventListener("click", function () { play("cant_stop_smilin.mp3"); });
         happy2 = document.querySelector("#happy2");
         happy2.addEventListener("click", function () { play("because_im_happy.mp3"); });
         happy3 = document.querySelector("#happy3");
-        happy3.addEventListener("click", function () { play("heute_hab_ich_gute_laune.mp3"); });
+        happy3.addEventListener("click", function () { play("sunshine_in_my_pocket_V2.mp3"); });
     }
     function play(soundpiece) {
         audio.src = "./assets/sounds/happy/" + soundpiece;
@@ -26,4 +26,4 @@ var soundMotion;
     //     }
     // }
 })(soundMotion || (soundMotion = {}));
-//# sourceMappingURL=handleSound.js.map
+//# sourceMappingURL=happy_handleSound.js.map

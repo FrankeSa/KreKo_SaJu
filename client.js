@@ -1,7 +1,7 @@
 "use strict";
 var soundMotion;
 (function (soundMotion) {
-    const socket = new WebSocket("wss://soundmotion.herokuapp.com/");
+    // const socket: WebSocket = new WebSocket("wss://soundmotion.herokuapp.com/");
     window.addEventListener("load", handleLoad);
     let inputField;
     let loginBtn;
@@ -13,7 +13,7 @@ var soundMotion;
     function getUsername(_event) {
         let username = inputField.value;
         console.log(username);
-        alert("dein Nutzername ist:" + username);
+        // alert("dein Nutzername ist:" + username);
     }
 })(soundMotion || (soundMotion = {})); //Ende Namespance
 //# sourceMappingURL=client.js.map

@@ -1,6 +1,6 @@
 namespace soundMotion {
 
-    const socket: WebSocket = new WebSocket("wss://soundmotion.herokuapp.com/");
+    // const socket: WebSocket = new WebSocket("wss://soundmotion.herokuapp.com/");
 
     window.addEventListener("load", handleLoad);
     let inputField: HTMLInputElement;
@@ -19,7 +19,7 @@ namespace soundMotion {
     function getUsername(_event: Event): void {
         let username: string = inputField.value;
         console.log(username);
-        alert("dein Nutzername ist:" + username);
+        // alert("dein Nutzername ist:" + username);
     }
 
 

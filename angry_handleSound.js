@@ -7,7 +7,6 @@ var soundMotion;
     let angry2;
     let angry3;
     function handleLoad(_event) {
-        //category happy
         angry1 = document.querySelector("#angry1");
         angry1.addEventListener("click", function () { play("fk_you_very_much.mp3"); });
         angry2 = document.querySelector("#angry2");

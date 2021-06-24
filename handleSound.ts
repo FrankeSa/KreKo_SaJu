@@ -1,6 +1,5 @@
 namespace soundMotion {
-
-
+    
     window.addEventListener("load", handleLoad);
     let happy1: HTMLDivElement;
     let happy2: HTMLDivElement;
@@ -16,10 +15,13 @@ namespace soundMotion {
         happy3.addEventListener("click", function () { play("heute_hab_ich_gute_laune.mp3") });
     }
 
+
+
+    
+
     function play(soundpiece: string): void {
         audio.src = "./assets/sounds/happy/" + soundpiece;
         audio.play();
-
     }
 
 

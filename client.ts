@@ -12,8 +12,6 @@ namespace soundMotion {
         inputField = <HTMLInputElement>document.querySelector("#inputField");
         loginBtn = <HTMLButtonElement>document.querySelector("#loginBtn");
         loginBtn.addEventListener("click", getUsername);
-
-
     }
 
 

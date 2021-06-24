@@ -597,8 +597,9 @@ body {
         position: absolute;
         right: 10px;
         cursor: pointer;
-        border: none;
+        border: solid;
         border-radius: 10px;
+    
     }
 
     .sadSend:hover {
@@ -840,7 +841,7 @@ body {
         position: absolute;
         right: 10px;
         cursor: pointer;
-        border: none;
+        border: solid;
         border-radius: 10px;
     }
 
@@ -1082,7 +1083,7 @@ body {
         position: absolute;
         right: 10px;
         cursor: pointer;
-        border: none;
+        border: solid;
         border-radius: 10px;
     }
 
@@ -1323,7 +1324,7 @@ body {
         position: absolute;
         right: 10px;
         cursor: pointer;
-        border: none;
+        border: solid;
         border-radius: 10px;
     }
 

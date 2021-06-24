@@ -5,6 +5,7 @@ var soundMotion;
     let happy1;
     let happy2;
     let happy3;
+    let audio = new Audio();
     function handleLoad(_event) {
         happy1 = document.querySelector("#happy1");
         happy1.addEventListener("click", function () { play("cant_stop_smilin.mp3"); });
@@ -14,8 +15,8 @@ var soundMotion;
         happy3.addEventListener("click", function () { play("heute_hab_ich_gute_laune.mp3"); });
     }
     function play(soundpiece) {
-        let sound = new Audio("./assets/sounds/happy/" + soundpiece);
-        sound.play();
+        audio.src = "./assets/sounds/happy/" + soundpiece;
+        audio.play();
     }
     // function handleLoad(_event: Event): void {
     //     happy1 = <HTMLDivElement>document.querySelector("#happy1");

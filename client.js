@@ -1,6 +1,7 @@
 "use strict";
 var soundMotion;
 (function (soundMotion) {
+    const socket = new WebSocket("wss://soundmotion.herokuapp.com/");
     window.addEventListener("load", handleLoad);
     let inputField;
     let loginBtn;

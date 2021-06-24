@@ -5,6 +5,7 @@ namespace soundMotion {
     let happy1: HTMLDivElement;
     let happy2: HTMLDivElement;
     let happy3: HTMLDivElement;
+    let audio: HTMLAudioElement = new Audio();
 
     function handleLoad(_event: Event): void {
         happy1 = <HTMLDivElement>document.querySelector("#happy1");
@@ -16,8 +17,9 @@ namespace soundMotion {
     }
 
     function play(soundpiece: string): void {
-        let sound: HTMLAudioElement = new Audio("./assets/sounds/happy/" + soundpiece);
-        sound.play();
+        audio.src = "./assets/sounds/happy/" + soundpiece;
+        audio.play();
+
     }
 
 

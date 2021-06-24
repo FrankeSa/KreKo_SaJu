@@ -1,5 +1,7 @@
 namespace soundMotion {
 
+    const socket: WebSocket = new WebSocket("wss://soundmotion.herokuapp.com/");
+
     window.addEventListener("load", handleLoad);
     let inputField: HTMLInputElement;
     let loginBtn: HTMLButtonElement;
@@ -10,7 +12,7 @@ namespace soundMotion {
         inputField = <HTMLInputElement>document.querySelector("#inputField");
         loginBtn = <HTMLButtonElement>document.querySelector("#loginBtn");
         loginBtn.addEventListener("click", getUsername);
-     
+
 
     }
 

@@ -15,16 +15,22 @@ namespace soundMotion {
 
     function handleLoad(_event: Event): void {
 
-        // inputField = <HTMLInputElement>document.querySelector("#inputField");
-        loginBtn = <HTMLButtonElement>document.querySelector("#loginBtn");
+
         // loginBtn.addEventListener("click", getUsername);
         love1 = <HTMLDivElement>document.querySelector("#love1");
         love2 = <HTMLDivElement>document.querySelector("#love2");
         love3 = <HTMLDivElement>document.querySelector("#love3");
-        loveSend1 = <HTMLButtonElement>document.querySelector("#loveSend1");
-        // loveSend1.addEventListener("click", function () { sendSound("./assets/sounds/love/hey_im_in_love.mp3") });
-        loveSend1.addEventListener("click", test);
-        love1.addEventListener("click", function () { sendSound("./assets/sounds/love/hey_im_in_love.mp3") });
+        loveSend1 = <HTMLButtonElement>document.querySelector("#love1 button");
+        loveSend1.addEventListener("click", function (e) {
+
+            console.log("Hallo sendLove1");
+            sendSound("./assets/sounds/love/hey_im_in_love.mp3");
+            e.stopImmediatePropagation();
+        });
+
+
+        // loveSend1.addEventListener("click", test);
+        love1.addEventListener("click", function () { console.log("Hallo playLove1"); play("./assets/sounds/love/hey_im_in_love.mp3") });
         love2.addEventListener("click", function () { play("./assets/sounds/love/I_want_ur_stupid_love.mp3") });
         love3.addEventListener("click", function () { play("./assets/sounds/love/keep_on_falling_in_love.mp3") });
     }
@@ -55,8 +61,10 @@ namespace soundMotion {
     // const messageListDiv: HTMLDivElement = <HTMLInputElement>document.getElementById("chatArea");
 
     function play(soundpiece: string): void {
+        audio.pause();
         audio.src = soundpiece;
-        audio.play();
+        // audio.play();
+
     }
 
 
@@ -124,7 +132,7 @@ namespace soundMotion {
 
     function test(_event: Event): void {
 
-console.log("SendSoundBtn clicked");
+        console.log("SendSoundBtn clicked");
 
     }
 

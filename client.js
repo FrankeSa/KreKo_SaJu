@@ -13,16 +13,18 @@ var soundMotion;
     let love3;
     let loveSend1;
     function handleLoad(_event) {
-        // inputField = <HTMLInputElement>document.querySelector("#inputField");
-        loginBtn = document.querySelector("#loginBtn");
         // loginBtn.addEventListener("click", getUsername);
         love1 = document.querySelector("#love1");
         love2 = document.querySelector("#love2");
         love3 = document.querySelector("#love3");
-        loveSend1 = document.querySelector("#loveSend1");
-        // loveSend1.addEventListener("click", function () { sendSound("./assets/sounds/love/hey_im_in_love.mp3") });
-        loveSend1.addEventListener("click", test);
-        love1.addEventListener("click", function () { sendSound("./assets/sounds/love/hey_im_in_love.mp3"); });
+        loveSend1 = document.querySelector("#love1 button");
+        loveSend1.addEventListener("click", function (e) {
+            console.log("Hallo sendLove1");
+            sendSound("./assets/sounds/love/hey_im_in_love.mp3");
+            e.stopImmediatePropagation();
+        });
+        // loveSend1.addEventListener("click", test);
+        love1.addEventListener("click", function () { console.log("Hallo playLove1"); play("./assets/sounds/love/hey_im_in_love.mp3"); });
         love2.addEventListener("click", function () { play("./assets/sounds/love/I_want_ur_stupid_love.mp3"); });
         love3.addEventListener("click", function () { play("./assets/sounds/love/keep_on_falling_in_love.mp3"); });
     }
@@ -30,8 +32,9 @@ var soundMotion;
     // get div element
     // const messageListDiv: HTMLDivElement = <HTMLInputElement>document.getElementById("chatArea");
     function play(soundpiece) {
+        audio.pause();
         audio.src = soundpiece;
-        audio.play();
+        // audio.play();
     }
     ///WENN DER CLIENT EINE MASSAGE EMPFÄNGT
     socket.addEventListener("message", (event) => {

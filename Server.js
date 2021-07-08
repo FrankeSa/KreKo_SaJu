@@ -45,4 +45,4 @@ var soundMotion;
         });
     });
 })(soundMotion = exports.soundMotion || (exports.soundMotion = {}));
-//# sourceMappingURL=Server.js.map
+//# sourceMappingURL=server.js.map

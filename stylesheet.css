@@ -8,6 +8,13 @@ body {
         background-position: bottom;
     }
 
+p {
+pointer-events: none;
+
+
+
+}
+
     /*LOGO*/
     #brand {
     display: flex; 

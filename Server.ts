@@ -31,7 +31,7 @@ export namespace soundMotion {
     const clientSockets: Set<WebSocket> = new Set();
 
     wss.on("connection", (socket) => {
-        console.log("Client connected on");
+        console.log("Client connected");
 
         clientSockets.add(socket);
 

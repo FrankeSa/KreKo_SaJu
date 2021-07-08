@@ -10,7 +10,7 @@ var soundMotion;
     // list of connected sockets
     const clientSockets = new Set();
     wss.on("connection", (socket) => {
-        console.log("Client connected on");
+        console.log("Client connected");
         clientSockets.add(socket);
         const initMessageObj = {
             // userNames:string;

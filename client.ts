@@ -3,9 +3,6 @@ namespace soundMotion {
     const socket: WebSocket = new WebSocket("wss://soundmotion.herokuapp.com/");
 
     window.addEventListener("load", handleLoad);
-    let inputField: HTMLInputElement;
-    let loginBtn: HTMLButtonElement;
-    let username: string;
     let audio: HTMLAudioElement = new Audio();
     let love1: HTMLDivElement;
     let love2: HTMLDivElement;
@@ -32,7 +29,6 @@ namespace soundMotion {
         loveSend1.addEventListener("click", function (e) { console.log("sending song1"); sendSound("./assets/sounds/love/hey_im_in_love.mp3"); e.stopImmediatePropagation(); });
         loveSend2.addEventListener("click", function (e) { sendSound("./assets/sounds/love/I_want_ur_stupid_love.mp3"); e.stopImmediatePropagation(); });
         loveSend3.addEventListener("click", function (e) { sendSound("./assets/sounds/love/keep_on_falling_in_love.mp3"); e.stopImmediatePropagation(); });
-
     }
 
     // carrier message interface
@@ -49,16 +45,16 @@ namespace soundMotion {
     interface TextMessage {
         // uerNames: string;
         text: string;
-        }
+    }
     let messageList: TextMessage[]; //= null; ?????
 
     // get div element
     // const messageListDiv: HTMLDivElement = <HTMLInputElement>document.getElementById("chatArea");
 
-    function play(soundpiece: string): void {
+    function play(_soundpiece: string): void {
         audio.pause();
-        audio.src = soundpiece;
-        // audio.play();
+        audio.src = _soundpiece;
+        audio.play();
 
     }
 
@@ -83,6 +79,7 @@ namespace soundMotion {
             case "text-message": {
                 const textMessage: TextMessage = <TextMessage>JSON.parse(<string>data);
                 messageList.push(textMessage); // add message to message list
+
                 play(textMessage.text);
                 console.log(textMessage.text);
 
@@ -98,7 +95,7 @@ namespace soundMotion {
     // WENN DER CLIENT EINE MASSAGE VERSCHICKT
 
     function sendSound(_soundpeace: string): void {
-        // window.location.href = "chat.html";
+        window.location.href = "chat.html";
         let soundToSend: string = _soundpeace;
 
         const message: TextMessage = {
@@ -112,17 +109,9 @@ namespace soundMotion {
         socket.send(JSON.stringify(textCarrier));
     }
 
-
-    // function getUsername(_event: Event): void {
-    //     username = inputField.value;
-    //     console.log(username);
-    //     // alert("dein Nutzername ist:" + username);
-    // }
-
-
-    socket.addEventListener("open", () => {
-        console.log("We are connected");
-    });
+    // socket.addEventListener("open", () => {
+    //     console.log("We are connected");
+    // });
 
 
 

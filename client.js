@@ -4,9 +4,6 @@ var soundMotion;
     // const socket: WebSocket = new WebSocket("ws://localhost:5000");
     const socket = new WebSocket("wss://soundmotion.herokuapp.com/");
     window.addEventListener("load", handleLoad);
-    let inputField;
-    let loginBtn;
-    let username;
     let audio = new Audio();
     let love1;
     let love2;
@@ -34,10 +31,10 @@ var soundMotion;
     let messageList; //= null; ?????
     // get div element
     // const messageListDiv: HTMLDivElement = <HTMLInputElement>document.getElementById("chatArea");
-    function play(soundpiece) {
+    function play(_soundpiece) {
         audio.pause();
-        audio.src = soundpiece;
-        // audio.play();
+        audio.src = _soundpiece;
+        audio.play();
     }
     ///WENN DER CLIENT EINE MASSAGE EMPFÄNGT
     socket.addEventListener("message", (event) => {
@@ -65,7 +62,7 @@ var soundMotion;
     });
     // WENN DER CLIENT EINE MASSAGE VERSCHICKT
     function sendSound(_soundpeace) {
-        // window.location.href = "chat.html";
+        window.location.href = "chat.html";
         let soundToSend = _soundpeace;
         const message = {
             text: soundToSend
@@ -76,13 +73,8 @@ var soundMotion;
         };
         socket.send(JSON.stringify(textCarrier));
     }
-    // function getUsername(_event: Event): void {
-    //     username = inputField.value;
-    //     console.log(username);
-    //     // alert("dein Nutzername ist:" + username);
-    // }
-    socket.addEventListener("open", () => {
-        console.log("We are connected");
-    });
+    // socket.addEventListener("open", () => {
+    //     console.log("We are connected");
+    // });
 })(soundMotion || (soundMotion = {})); //Ende Namespance
 //# sourceMappingURL=client.js.map

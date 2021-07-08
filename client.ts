@@ -95,7 +95,7 @@ namespace soundMotion {
     // WENN DER CLIENT EINE MASSAGE VERSCHICKT
 
     function sendSound(_soundpeace: string): void {
-        // window.location.href = "chat.html";
+        window.location.href = "chat.html";
         let soundToSend: string = _soundpeace;
 
         const message: TextMessage = {

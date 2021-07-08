@@ -25,12 +25,7 @@ var soundMotion;
                     const textMessage = JSON.parse(data);
                     messageList.push(textMessage); // add message to message list
                     audio.src = textMessage.text;
-                    const sarah = audio.play();
-                    if (sarah !== undefined) {
-                        sarah.then(_ => {
-                            audio.play();
-                        });
-                    }
+                    audio.play();
                     console.log(textMessage.text);
                     // displayListUserNames();
                     break;

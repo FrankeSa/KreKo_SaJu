@@ -1,5 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 var soundMotion;
 (function (soundMotion) {
     // const socket: WebSocket = new WebSocket("ws://localhost:5000");
@@ -54,7 +53,8 @@ var soundMotion;
             case "text-message": {
                 const textMessage = JSON.parse(data);
                 messageList.push(textMessage); // add message to message list
-                play(textMessage.text);
+                audio.src = textMessage.text;
+                audio.play();
                 console.log(textMessage.text);
                 // displayListUserNames();
                 break;
@@ -63,7 +63,7 @@ var soundMotion;
     });
     // WENN DER CLIENT EINE MASSAGE VERSCHICKT
     function sendSound(_soundpeace) {
-        window.location.href = "chat.html";
+        // window.location.href = "chat.html";
         let soundToSend = _soundpeace;
         const message = {
             text: soundToSend
@@ -77,5 +77,5 @@ var soundMotion;
     socket.addEventListener("open", () => {
         console.log("We are connected");
     });
-})(soundMotion = exports.soundMotion || (exports.soundMotion = {})); //Ende Namespance
+})(soundMotion || (soundMotion = {})); //Ende Namespance
 //# sourceMappingURL=client.js.map

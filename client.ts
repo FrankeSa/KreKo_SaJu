@@ -1,4 +1,4 @@
-export namespace soundMotion {
+namespace soundMotion {
     // const socket: WebSocket = new WebSocket("ws://localhost:5000");
     const socket: WebSocket = new WebSocket("wss://soundmotion.herokuapp.com/");
 
@@ -79,8 +79,8 @@ export namespace soundMotion {
             case "text-message": {
                 const textMessage: TextMessage = <TextMessage>JSON.parse(<string>data);
                 messageList.push(textMessage); // add message to message list
-
-                play(textMessage.text);
+                audio.src = textMessage.text;
+                audio.play();
                 console.log(textMessage.text);
 
                 // displayListUserNames();
@@ -95,7 +95,7 @@ export namespace soundMotion {
     // WENN DER CLIENT EINE MASSAGE VERSCHICKT
 
     function sendSound(_soundpeace: string): void {
-        window.location.href = "chat.html";
+        // window.location.href = "chat.html";
         let soundToSend: string = _soundpeace;
 
         const message: TextMessage = {

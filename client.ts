@@ -11,28 +11,28 @@ namespace soundMotion {
     let love2: HTMLDivElement;
     let love3: HTMLDivElement;
     let loveSend1: HTMLButtonElement;
+    let loveSend2: HTMLButtonElement;
+    let loveSend3: HTMLButtonElement;
 
 
     function handleLoad(_event: Event): void {
 
-
-        // loginBtn.addEventListener("click", getUsername);
+        // Category Love ******
         love1 = <HTMLDivElement>document.querySelector("#love1");
         love2 = <HTMLDivElement>document.querySelector("#love2");
         love3 = <HTMLDivElement>document.querySelector("#love3");
         loveSend1 = <HTMLButtonElement>document.querySelector("#love1 button");
-        loveSend1.addEventListener("click", function (e) {
-
-            console.log("Hallo sendLove1");
-            sendSound("./assets/sounds/love/hey_im_in_love.mp3");
-            e.stopImmediatePropagation();
-        });
-
-
-        // loveSend1.addEventListener("click", test);
-        love1.addEventListener("click", function () { console.log("Hallo playLove1"); play("./assets/sounds/love/hey_im_in_love.mp3") });
+        loveSend2 = <HTMLButtonElement>document.querySelector("#love2 button");
+        loveSend3 = <HTMLButtonElement>document.querySelector("#love3 button");
+        //Play the Sound
+        love1.addEventListener("click", function () { play("./assets/sounds/love/hey_im_in_love.mp3") });
         love2.addEventListener("click", function () { play("./assets/sounds/love/I_want_ur_stupid_love.mp3") });
         love3.addEventListener("click", function () { play("./assets/sounds/love/keep_on_falling_in_love.mp3") });
+        // Send the Sound 
+        loveSend1.addEventListener("click", function (e) { sendSound("./assets/sounds/love/hey_im_in_love.mp3"); e.stopImmediatePropagation(); });
+        loveSend2.addEventListener("click", function (e) { sendSound("./assets/sounds/love/I_want_ur_stupid_love.mp3"); e.stopImmediatePropagation(); });
+        loveSend3.addEventListener("click", function (e) { sendSound("./assets/sounds/love/keep_on_falling_in_love.mp3"); e.stopImmediatePropagation(); });
+
     }
 
     // carrier message interface
@@ -103,6 +103,7 @@ namespace soundMotion {
     // WENN DER CLIENT EINE MASSAGE VERSCHICKT
 
     function sendSound(_soundpeace: string): void {
+        window.location.href = "chat.html";
         let soundToSend: string = _soundpeace;
 
         const message: TextMessage = {
@@ -130,11 +131,7 @@ namespace soundMotion {
         console.log("We are connected");
     });
 
-    function test(_event: Event): void {
 
-        console.log("SendSoundBtn clicked");
-
-    }
 
 
 

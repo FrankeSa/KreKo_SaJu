@@ -12,21 +12,24 @@ var soundMotion;
     let love2;
     let love3;
     let loveSend1;
+    let loveSend2;
+    let loveSend3;
     function handleLoad(_event) {
-        // loginBtn.addEventListener("click", getUsername);
+        // Category Love ******
         love1 = document.querySelector("#love1");
         love2 = document.querySelector("#love2");
         love3 = document.querySelector("#love3");
         loveSend1 = document.querySelector("#love1 button");
-        loveSend1.addEventListener("click", function (e) {
-            console.log("Hallo sendLove1");
-            sendSound("./assets/sounds/love/hey_im_in_love.mp3");
-            e.stopImmediatePropagation();
-        });
-        // loveSend1.addEventListener("click", test);
-        love1.addEventListener("click", function () { console.log("Hallo playLove1"); play("./assets/sounds/love/hey_im_in_love.mp3"); });
+        loveSend2 = document.querySelector("#love2 button");
+        loveSend3 = document.querySelector("#love3 button");
+        //Play the Sound
+        love1.addEventListener("click", function () { play("./assets/sounds/love/hey_im_in_love.mp3"); });
         love2.addEventListener("click", function () { play("./assets/sounds/love/I_want_ur_stupid_love.mp3"); });
         love3.addEventListener("click", function () { play("./assets/sounds/love/keep_on_falling_in_love.mp3"); });
+        // Send the Sound 
+        loveSend1.addEventListener("click", function (e) { sendSound("./assets/sounds/love/hey_im_in_love.mp3"); e.stopImmediatePropagation(); });
+        loveSend2.addEventListener("click", function (e) { sendSound("./assets/sounds/love/I_want_ur_stupid_love.mp3"); e.stopImmediatePropagation(); });
+        loveSend3.addEventListener("click", function (e) { sendSound("./assets/sounds/love/keep_on_falling_in_love.mp3"); e.stopImmediatePropagation(); });
     }
     let messageList; //= null; ?????
     // get div element
@@ -62,6 +65,7 @@ var soundMotion;
     });
     // WENN DER CLIENT EINE MASSAGE VERSCHICKT
     function sendSound(_soundpeace) {
+        window.location.href = "chat.html";
         let soundToSend = _soundpeace;
         const message = {
             text: soundToSend
@@ -81,8 +85,5 @@ var soundMotion;
     socket.addEventListener("open", () => {
         console.log("We are connected");
     });
-    function test(_event) {
-        console.log("SendSoundBtn clicked");
-    }
 })(soundMotion || (soundMotion = {})); //Ende Namespance
 //# sourceMappingURL=client.js.map

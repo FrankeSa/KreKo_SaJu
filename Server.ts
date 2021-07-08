@@ -20,9 +20,6 @@ export namespace soundMotion {
     }
 
 
-//TEst TEst 
-
-
     const port: number = Number(process.env.PORT) || 5000;
 
     const wss: WebSocket.Server = new WebSocket.Server({ port: port });

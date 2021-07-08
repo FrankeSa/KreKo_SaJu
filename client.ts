@@ -4,6 +4,7 @@ namespace soundMotion {
 
     window.addEventListener("load", handleLoad);
     let audio: HTMLAudioElement = new Audio();
+
     let love1: HTMLDivElement;
     let love2: HTMLDivElement;
     let love3: HTMLDivElement;
@@ -29,6 +30,7 @@ namespace soundMotion {
         loveSend1.addEventListener("click", function (e) { console.log("sending song1"); sendSound("./assets/sounds/love/hey_im_in_love.mp3"); e.stopImmediatePropagation(); });
         loveSend2.addEventListener("click", function (e) { sendSound("./assets/sounds/love/I_want_ur_stupid_love.mp3"); e.stopImmediatePropagation(); });
         loveSend3.addEventListener("click", function (e) { sendSound("./assets/sounds/love/keep_on_falling_in_love.mp3"); e.stopImmediatePropagation(); });
+     
     }
 
     // carrier message interface
@@ -46,7 +48,7 @@ namespace soundMotion {
         // uerNames: string;
         text: string;
     }
-    let messageList: TextMessage[]; //= null; ?????
+    let messageList: TextMessage[]; 
 
     // get div element
     // const messageListDiv: HTMLDivElement = <HTMLInputElement>document.getElementById("chatArea");
@@ -89,8 +91,6 @@ namespace soundMotion {
         }
 
     });
-
-
 
     // WENN DER CLIENT EINE MASSAGE VERSCHICKT
 

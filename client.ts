@@ -63,7 +63,7 @@ namespace soundMotion {
     function play(soundpiece: string): void {
         audio.pause();
         audio.src = soundpiece;
-        audio.play();
+        // audio.play();
 
     }
 

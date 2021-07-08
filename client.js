@@ -37,7 +37,7 @@ var soundMotion;
     function play(soundpiece) {
         audio.pause();
         audio.src = soundpiece;
-        audio.play();
+        // audio.play();
     }
     ///WENN DER CLIENT EINE MASSAGE EMPFÄNGT
     socket.addEventListener("message", (event) => {

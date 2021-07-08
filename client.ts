@@ -24,11 +24,11 @@ namespace soundMotion {
         loveSend1 = <HTMLButtonElement>document.querySelector("#love1 button");
         loveSend2 = <HTMLButtonElement>document.querySelector("#love2 button");
         loveSend3 = <HTMLButtonElement>document.querySelector("#love3 button");
-        //Play the Sound
+        //Play Sound
         love1.addEventListener("click", function () { play("./assets/sounds/love/hey_im_in_love.mp3") });
         love2.addEventListener("click", function () { play("./assets/sounds/love/I_want_ur_stupid_love.mp3") });
         love3.addEventListener("click", function () { play("./assets/sounds/love/keep_on_falling_in_love.mp3") });
-        // Send the Sound 
+        // Send Sound 
         loveSend1.addEventListener("click", function (e) { console.log("sending song1"); sendSound("./assets/sounds/love/hey_im_in_love.mp3"); e.stopImmediatePropagation(); });
         loveSend2.addEventListener("click", function (e) { sendSound("./assets/sounds/love/I_want_ur_stupid_love.mp3"); e.stopImmediatePropagation(); });
         loveSend3.addEventListener("click", function (e) { sendSound("./assets/sounds/love/keep_on_falling_in_love.mp3"); e.stopImmediatePropagation(); });
@@ -40,21 +40,16 @@ namespace soundMotion {
         selector: string;
         data?: string;
     }
-
     // client init message interface
     interface InitMessage {
         //  userNames: string;
         messages: TextMessage[];
     }
-
-
     // client text message interface
     interface TextMessage {
         // uerNames: string;
         text: string;
-    }
-
-
+        }
     let messageList: TextMessage[]; //= null; ?????
 
     // get div element

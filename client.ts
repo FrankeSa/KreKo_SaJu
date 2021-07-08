@@ -29,7 +29,7 @@ namespace soundMotion {
         love2.addEventListener("click", function () { play("./assets/sounds/love/I_want_ur_stupid_love.mp3") });
         love3.addEventListener("click", function () { play("./assets/sounds/love/keep_on_falling_in_love.mp3") });
         // Send the Sound 
-        loveSend1.addEventListener("click", function (e) { sendSound("./assets/sounds/love/hey_im_in_love.mp3"); e.stopImmediatePropagation(); });
+        loveSend1.addEventListener("click", function (e) { console.log("sendLove1 pushed") sendSound("./assets/sounds/love/hey_im_in_love.mp3"); e.stopImmediatePropagation(); });
         loveSend2.addEventListener("click", function (e) { sendSound("./assets/sounds/love/I_want_ur_stupid_love.mp3"); e.stopImmediatePropagation(); });
         loveSend3.addEventListener("click", function (e) { sendSound("./assets/sounds/love/keep_on_falling_in_love.mp3"); e.stopImmediatePropagation(); });
 
@@ -63,7 +63,7 @@ namespace soundMotion {
     function play(soundpiece: string): void {
         audio.pause();
         audio.src = soundpiece;
-        // audio.play();
+        audio.play();
 
     }
 
@@ -103,7 +103,7 @@ namespace soundMotion {
     // WENN DER CLIENT EINE MASSAGE VERSCHICKT
 
     function sendSound(_soundpeace: string): void {
-        window.location.href = "chat.html";
+        // window.location.href = "chat.html";
         let soundToSend: string = _soundpeace;
 
         const message: TextMessage = {
@@ -114,8 +114,6 @@ namespace soundMotion {
             selector: "text-message",
             data: JSON.stringify(message)
         };
-        console.log(message);
-
         socket.send(JSON.stringify(textCarrier));
     }
 

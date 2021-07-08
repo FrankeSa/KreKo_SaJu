@@ -23,7 +23,7 @@ export namespace soundMotion {
 
 
 
-    const port: number = 5000; // Number(process.env.PORT) ||
+    const port: number = Number(process.env.PORT) || 5000;
 
     const wss: WebSocket.Server = new WebSocket.Server({ port: port });
 

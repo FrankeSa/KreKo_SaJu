@@ -1,8 +1,8 @@
 "use strict";
 var soundMotion;
 (function (soundMotion) {
-    const socket = new WebSocket("ws://localhost:5000");
-    // const socket: WebSocket = new WebSocket("wss://soundmotion.herokuapp.com/");
+    // const socket: WebSocket = new WebSocket("ws://localhost:5000");
+    const socket = new WebSocket("wss://soundmotion.herokuapp.com/");
     window.addEventListener("load", handleLoad);
     let inputField;
     let loginBtn;
@@ -19,8 +19,9 @@ var soundMotion;
         love1 = document.querySelector("#love1");
         love2 = document.querySelector("#love2");
         love3 = document.querySelector("#love3");
-        // loveSend1 = <HTMLButtonElement>document.querySelector("#loveSend1");
+        loveSend1 = document.querySelector("#loveSend1");
         // loveSend1.addEventListener("click", function () { sendSound("./assets/sounds/love/hey_im_in_love.mp3") });
+        // loveSend1.addEventListener("click", test);
         love1.addEventListener("click", function () { sendSound("./assets/sounds/love/hey_im_in_love.mp3"); });
         love2.addEventListener("click", function () { play("./assets/sounds/love/I_want_ur_stupid_love.mp3"); });
         love3.addEventListener("click", function () { play("./assets/sounds/love/keep_on_falling_in_love.mp3"); });
@@ -49,7 +50,8 @@ var soundMotion;
             case "text-message": {
                 const textMessage = JSON.parse(data);
                 messageList.push(textMessage); // add message to message list
-                // play(textMessage);
+                play(textMessage.text);
+                console.log(textMessage.text);
                 // displayListUserNames();
                 break;
             }
@@ -76,5 +78,8 @@ var soundMotion;
     socket.addEventListener("open", () => {
         console.log("We are connected");
     });
+    function test(_event) {
+        console.log("SendSoundBtn clicked");
+    }
 })(soundMotion || (soundMotion = {})); //Ende Namespance
 //# sourceMappingURL=client.js.map

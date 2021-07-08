@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const WebSocket = require("ws");
 var soundMotion;
 (function (soundMotion) {
-    const port = 5000; // Number(process.env.PORT) ||
+    const port = Number(process.env.PORT) || 5000;
     const wss = new WebSocket.Server({ port: port });
     // list of client messages
     const messageList = [];

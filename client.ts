@@ -1,4 +1,4 @@
-namespace soundMotion {
+export namespace soundMotion {
     // const socket: WebSocket = new WebSocket("ws://localhost:5000");
     const socket: WebSocket = new WebSocket("wss://soundmotion.herokuapp.com/");
 
@@ -109,9 +109,9 @@ namespace soundMotion {
         socket.send(JSON.stringify(textCarrier));
     }
 
-    // socket.addEventListener("open", () => {
-    //     console.log("We are connected");
-    // });
+    socket.addEventListener("open", () => {
+        console.log("We are connected");
+    });
 
 
 

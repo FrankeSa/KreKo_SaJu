@@ -21,7 +21,7 @@ var soundMotion;
         love3 = document.querySelector("#love3");
         loveSend1 = document.querySelector("#loveSend1");
         // loveSend1.addEventListener("click", function () { sendSound("./assets/sounds/love/hey_im_in_love.mp3") });
-        // loveSend1.addEventListener("click", test);
+        loveSend1.addEventListener("click", test);
         love1.addEventListener("click", function () { sendSound("./assets/sounds/love/hey_im_in_love.mp3"); });
         love2.addEventListener("click", function () { play("./assets/sounds/love/I_want_ur_stupid_love.mp3"); });
         love3.addEventListener("click", function () { play("./assets/sounds/love/keep_on_falling_in_love.mp3"); });

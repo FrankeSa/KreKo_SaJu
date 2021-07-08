@@ -55,7 +55,7 @@ namespace soundMotion {
                     const textMessage: TextMessage = <TextMessage>JSON.parse(<string>data);
                     messageList.push(textMessage); // add message to message list
                     audio.src = textMessage.text;
-                    audio.play();            
+                    audio.play(); 
 
                     console.log(textMessage.text);
 

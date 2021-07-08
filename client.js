@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var soundMotion;
 (function (soundMotion) {
     // const socket: WebSocket = new WebSocket("ws://localhost:5000");
@@ -73,8 +74,8 @@ var soundMotion;
         };
         socket.send(JSON.stringify(textCarrier));
     }
-    // socket.addEventListener("open", () => {
-    //     console.log("We are connected");
-    // });
-})(soundMotion || (soundMotion = {})); //Ende Namespance
+    socket.addEventListener("open", () => {
+        console.log("We are connected");
+    });
+})(soundMotion = exports.soundMotion || (exports.soundMotion = {})); //Ende Namespance
 //# sourceMappingURL=client.js.map

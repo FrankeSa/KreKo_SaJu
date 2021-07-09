@@ -32,34 +32,34 @@ var soundMotion;
     let messageList; //= null; ?????
     // get div element
     // const messageListDiv: HTMLDivElement = <HTMLInputElement>document.getElementById("chatArea");
-    ///WENN DER CLIENT EINE MASSAGE EMPFÄNGT
-    socket.addEventListener("message", (event) => {
-        const carrier = JSON.parse(event.data);
-        const selector = carrier.selector;
-        const data = carrier.data;
-        switch (selector) {
-            case "init": {
-                const initMessage = JSON.parse(data);
-                // store userNames and message list
-                // userNames = initMessage.userNames;
-                messageList = initMessage.messages;
-                // displayListUserNames();
-                break;
-            }
-            case "text-message": {
-                const textMessage = JSON.parse(data);
-                messageList.push(textMessage); // add message to message list
-                audio.src = textMessage.text;
-                audio.play();
-                console.log(textMessage.text);
-                // displayListUserNames();
-                break;
-            }
-        }
-    });
+    // ///WENN DER CLIENT EINE MASSAGE EMPFÄNGT
+    // socket.addEventListener("message", (event) => {
+    //     const carrier: CarrierMessage = <CarrierMessage>JSON.parse(event.data);
+    //     const selector: string = carrier.selector;
+    //     const data: string = <string>carrier.data;
+    //     switch (selector) {
+    //         case "init": {
+    //             const initMessage: InitMessage = <InitMessage>JSON.parse(data);
+    //             // store userNames and message list
+    //             // userNames = initMessage.userNames;
+    //             messageList = initMessage.messages;
+    //             // displayListUserNames();
+    //             break;
+    //         }
+    //         case "text-message": {
+    //             const textMessage: TextMessage = <TextMessage>JSON.parse(<string>data);
+    //             messageList.push(textMessage); // add message to message list
+    //             audio.src = textMessage.text;
+    //             audio.play();
+    //             console.log(textMessage.text);
+    //             // displayListUserNames();
+    //             break;
+    //         }
+    //     }
+    // });
     // WENN DER CLIENT EINE MASSAGE VERSCHICKT
     function sendSound(_soundpeace) {
-        // window.location.href = "chat.html";
+        window.location.href = "chat.html";
         let soundToSend = _soundpeace;
         const message = {
             text: soundToSend
@@ -69,6 +69,7 @@ var soundMotion;
             data: JSON.stringify(message)
         };
         socket.send(JSON.stringify(textCarrier));
+        console.log(textCarrier);
     }
     socket.addEventListener("open", () => {
         console.log("We are connected");

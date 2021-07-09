@@ -3,8 +3,13 @@ var soundMotion;
 (function (soundMotion) {
     const socket = new WebSocket("wss://soundmotion.herokuapp.com/");
     let audio = new Audio();
-    window.addEventListener("load", handleLoad);
+    window.addEventListener("click", handleLoad);
     function handleLoad(_event) {
+        function play(_textMessage) {
+            audio.pause();
+            audio.src = _textMessage;
+            audio.play();
+        }
         console.log("Hier bist du im Chat");
         let messageList; //= null; ?????
         ///WENN DER CLIENT EINE MASSAGE EMPFÄNGT
@@ -24,8 +29,9 @@ var soundMotion;
                 case "text-message": {
                     const textMessage = JSON.parse(data);
                     messageList.push(textMessage); // add message to message list
-                    audio.src = textMessage.text;
-                    audio.play();
+                    // audio.src = textMessage.text;
+                    // audio.play(); 
+                    play(textMessage.text);
                     console.log(textMessage.text);
                     // displayListUserNames();
                     break;

@@ -59,7 +59,7 @@ var soundMotion;
     });
     // WENN DER CLIENT EINE MASSAGE VERSCHICKT
     function sendSound(_soundpeace) {
-        // window.location.href = "chat.html";
+        window.location.href = "chat.html";
         let soundToSend = _soundpeace;
         const message = {
             text: soundToSend

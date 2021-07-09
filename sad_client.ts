@@ -81,7 +81,7 @@ namespace soundMotion {
                 messageList.push(textMessage); // add message to message list
                 audio.src = textMessage.text;
                 audio.play();
-                console.log(textMessage.text);
+                console.log("following song was received", textMessage.text);
 
                 // displayListUserNames();
                 break;
@@ -105,6 +105,7 @@ namespace soundMotion {
             data: JSON.stringify(message)
         };
         socket.send(JSON.stringify(textCarrier));
+        console.log("following song has been sent", textCarrier.data);
     }
 
     socket.addEventListener("open", () => {

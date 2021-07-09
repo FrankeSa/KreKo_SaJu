@@ -1,4 +1,5 @@
 namespace soundMotion {
+ 
     const socket: WebSocket = new WebSocket("wss://soundmotion.herokuapp.com/");
     let audio: HTMLAudioElement = new Audio();
 

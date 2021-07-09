@@ -57,41 +57,41 @@ namespace soundMotion {
     // const messageListDiv: HTMLDivElement = <HTMLInputElement>document.getElementById("chatArea");
 
 
-    // ///WENN DER CLIENT EINE MASSAGE EMPFÄNGT
-    // socket.addEventListener("message", (event) => {
-    //     const carrier: CarrierMessage = <CarrierMessage>JSON.parse(event.data);
-    //     const selector: string = carrier.selector;
-    //     const data: string = <string>carrier.data;
+    ///WENN DER CLIENT EINE MASSAGE EMPFÄNGT
+    socket.addEventListener("message", (event) => {
+        const carrier: CarrierMessage = <CarrierMessage>JSON.parse(event.data);
+        const selector: string = carrier.selector;
+        const data: string = <string>carrier.data;
 
-    //     switch (selector) {
-    //         case "init": {
-    //             const initMessage: InitMessage = <InitMessage>JSON.parse(data);
+        switch (selector) {
+            case "init": {
+                const initMessage: InitMessage = <InitMessage>JSON.parse(data);
 
-    //             // store userNames and message list
-    //             // userNames = initMessage.userNames;
-    //             messageList = initMessage.messages;
-    //             // displayListUserNames();
-    //             break;
-    //         }
+                // store userNames and message list
+                // userNames = initMessage.userNames;
+                messageList = initMessage.messages;
+                // displayListUserNames();
+                break;
+            }
 
-    //         case "text-message": {
-    //             const textMessage: TextMessage = <TextMessage>JSON.parse(<string>data);
-    //             messageList.push(textMessage); // add message to message list
-    //             audio.src = textMessage.text;
-    //             audio.play();
-    //             console.log(textMessage.text);
+            case "text-message": {
+                const textMessage: TextMessage = <TextMessage>JSON.parse(<string>data);
+                messageList.push(textMessage); // add message to message list
+                audio.src = textMessage.text;
+                audio.play();
+                console.log("following song was received", textMessage.text);
 
-    //             // displayListUserNames();
-    //             break;
-    //         }
-    //     }
+                // displayListUserNames();
+                break;
+            }
+        }
 
-    // });
+    });
 
     // WENN DER CLIENT EINE MASSAGE VERSCHICKT
 
     function sendSound(_soundpeace: string): void {
-        window.location.href = "chat.html";
+        // window.location.href = "chat.html";
         let soundToSend: string = _soundpeace;
 
         const message: TextMessage = {
@@ -103,7 +103,7 @@ namespace soundMotion {
             data: JSON.stringify(message)
         };
         socket.send(JSON.stringify(textCarrier));
-        console.log(textCarrier);
+        console.log("following song has been sent", textCarrier.data);
     }
 
     socket.addEventListener("open", () => {

@@ -11,9 +11,6 @@ namespace soundMotion {
     let angrySend2: HTMLButtonElement;
     let angrySend3: HTMLButtonElement;
 
-
-
-
     function handleLoad(_event: Event): void {
 
         angry1 = <HTMLDivElement>document.querySelector("#angry1");

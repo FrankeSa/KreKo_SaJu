@@ -18,9 +18,9 @@ namespace soundMotion {
         happySend2 = <HTMLButtonElement>document.querySelector("#happy2 button");
         happySend3 = <HTMLButtonElement>document.querySelector("#happy3 button");
 
-        happy1.addEventListener("click", function () { play("cant_stop_smilin.mp3") });
-        happy2.addEventListener("click", function () { play("because_im_happy.mp3") });
-        happy3.addEventListener("click", function () { play("sunshine_in_my_pocket_V2.mp3") });
+        happy1.addEventListener("click", function () { play("./assets/sounds/happy/because_im_happy/cant_stop_smilin.mp3") });
+        happy2.addEventListener("click", function () { play("./assets/sounds/happy/because_im_happy/because_im_happy.mp3") });
+        happy3.addEventListener("click", function () { play("./assets/sounds/happy/because_im_happy/sunshine_in_my_pocket_V2.mp3") });
 
         happySend1.addEventListener("click", function (e) { console.log("sending song1"); sendSound("./assets/sounds/happy/cant_stop_smilin.mp3"); e.stopImmediatePropagation(); });
         happySend2.addEventListener("click", function (e) { sendSound("./assets/sounds/happy/because_im_happy.mp3"); e.stopImmediatePropagation(); });

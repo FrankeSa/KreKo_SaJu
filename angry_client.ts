@@ -23,9 +23,9 @@ namespace soundMotion {
         angrySend2 = <HTMLButtonElement>document.querySelector("#angry2 button");
         angrySend3 = <HTMLButtonElement>document.querySelector("#angry3 button");
 
-        angry1.addEventListener("click", function () { play("fk_you_very_much.mp3") });
-        angry2.addEventListener("click", function () { play("i_hate_u_so_much_right_now.mp3") });
-        angry3.addEventListener("click", function () { play("im_t_n_t.mp3") });
+        angry1.addEventListener("click", function () { play("./assets/sounds/angry/fk_you_very_much.mp3") });
+        angry2.addEventListener("click", function () { play("./assets/sounds/angry/i_hate_u_so_much_right_now.mp3") });
+        angry3.addEventListener("click", function () { play("./assets/sounds/angry/im_t_n_t.mp3") });
 
         angrySend1.addEventListener("click", function (e) { console.log("sending song1"); sendSound("./assets/sounds/angry/fk_you_very_much.mp3"); e.stopImmediatePropagation(); });
         angrySend2.addEventListener("click", function (e) { sendSound("./assets/sounds/angry/i_hate_u_so_much_right_now.mp3"); e.stopImmediatePropagation(); });
